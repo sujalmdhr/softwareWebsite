@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "sujal@gmail.com",
+      "password": "sujal321"
+    },
+    {
+      "id": "2",
+      "email": "mdhr@gmail.com",
+      "password": "sujal321"
+    },
+    {
+      "id": "fb42",
+      "userName": "suzal",
+      "email": "suzal@gmail.com",
+      "password": "asdasdas"
+    },
+    {
+      "id": "a6a4",
+      "username": "binu09",
+      "email": "binu@gmail.com",
+      "password": "binu321",
+      "phonenumber": "1234567890"
+    },
+    {
+      "id": "a9d2",
+      "username": "suzal",
+      "email": "sujal@gmail.com",
+      "password": "sujal321",
+      "phonenumber": "9814277220"
+    }
+  ]
+}
