@@ -14,9 +14,7 @@ const AdminPanel = () => {
         <div className='basis-[88%] border'>
             <DashBoard/>
 
-            <div>
-                <Outlet></Outlet>
-            </div>
+           
         </div>
 
     </div>

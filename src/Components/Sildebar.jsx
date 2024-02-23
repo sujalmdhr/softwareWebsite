@@ -73,9 +73,7 @@ const Sildebar = () => {
         <div className="flex items-center justify-between gap-[10px] py-[5px] cursor-pointer">
           <div className="flex items-center gap-[10px]">
             <FaRegCalendarAlt color="white" />
-            <p className="text-[14px] leading-[20px] font-normal text-white">
-              Tables
-            </p>
+            <Link className="text-[14px] leading-[20px] font-normal text-white" to="/Menu">Menu</Link>
           </div>
           <FaChevronRight color="white" />
         </div>

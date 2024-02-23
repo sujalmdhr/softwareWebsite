@@ -1,27 +1,35 @@
+// Setting.js
 import React, { useState } from 'react';
 import { FaUser } from 'react-icons/fa';
-
+import { useDispatch } from 'react-redux';
+import { updateProfile } from '../features/userSlice';
 
 function Setting({ initialName }) {
-   
-    const [name, setName] = useState(initialName || '');
-    const [email, setEmail] = useState('');
-    const [number, setNumber] = useState('');
-    const [oldPassword, setOldPassword] = useState('');
-    const [password, setPassword] = useState('');
-    const [emailError, setEmailError] = useState('');
-    const [numberError, setNumberError] = useState('');
+    const dispatch = useDispatch();
+
+    const [formData, setFormData] = useState({
+        name: initialName || '',
+        email: '',
+        number: '',
+        oldPassword: '',
+        password: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
 
     const handleSave = (e) => {
         e.preventDefault();
-        // dispatch(updateProfile({
-        //     name,
-        //     email,
-        //     number,
-        //     oldPassword,
-        //     password
-        // }));
+        console.log("Form is being submitted");
+        console.log("Form Data:", formData);
+        dispatch(updateProfile(formData));
     };
+    
 
     return (
         <div className='flex items-center justify-center h-screen'>
@@ -37,8 +45,9 @@ function Setting({ initialName }) {
                     <div className="mr-5">
                         <p className="text-zinc-600 font-semibold">Full Name</p>
                         <input
-                            onChange={(e) => setName(e.target.value)}
-                            value={name}
+                            onChange={handleChange}
+                            value={formData.name}
+                            name="name"
                             className="outline-none h-10 border border-sm w-full px-5"
                             type="text"
                             placeholder="Full name"
@@ -48,33 +57,34 @@ function Setting({ initialName }) {
                     <div className="mr-5">
                         <p className="text-zinc-600 font-semibold">Email :</p>
                         <input
-                            onChange={(e) => setEmail(e.target.value)}
-                            value={email}
+                            onChange={handleChange}
+                            value={formData.email}
+                            name="email"
                             className="outline-none h-10 border border-sm w-full px-5"
                             type="text"
                             placeholder="Email"
                             required
                         />
-                        {emailError && <p className="text-red-500">{emailError}</p>}
                     </div>
                     <div className="mr-5">
                         <p className="text-zinc-600 font-semibold">Phone number :</p>
                         <input
-                            onChange={(e) => setNumber(e.target.value)}
-                            value={number}
+                            onChange={handleChange}
+                            value={formData.number}
+                            name="number"
                             className="outline-none h-10 border border-sm w-full px-5"
                             type="tel"
                             pattern="[0-9]{10}"
                             placeholder="Phone Number"
                             required
                         />
-                        {numberError && <p className="text-red-500">{numberError}</p>}
                     </div>
                     <div className="mr-5">
                         <p className="text-zinc-600 font-semibold">Old Password :</p>
                         <input
-                            onChange={(e) => setOldPassword(e.target.value)}
-                            value={oldPassword}
+                            onChange={handleChange}
+                            value={formData.oldPassword}
+                            name="oldPassword"
                             className="outline-none h-10 border border-sm w-full px-5"
                             type="password"
                             placeholder="Password"
@@ -84,8 +94,9 @@ function Setting({ initialName }) {
                     <div className="mr-5">
                         <p className="text-zinc-600 font-semibold">New Password :</p>
                         <input
-                            onChange={(e) => setPassword(e.target.value)}
-                            value={password}
+                            onChange={handleChange}
+                            value={formData.password}
+                            name="password"
                             className="outline-none h-10 border border-sm w-full px-5"
                             type="password"
                             placeholder="Password"
@@ -94,7 +105,7 @@ function Setting({ initialName }) {
                     </div>
                     
                     <div className="mr-5">
-                        <button className="bg-blue-400 text-white h-10 hover:bg-blue-600 mt-4 duration-300 rounded-full w-full font-semibold">
+                        <button className="bg-blue-400 text-white h-10 hover:bg-blue-600 mt-4 duration-300 rounded-full w-full font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50" type="submit">
                             Save
                         </button>
                         <p className="text-end">Forgot Password?</p>

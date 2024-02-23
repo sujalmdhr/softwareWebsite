@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white h-[7vh] md:px-14 p-4 max-w-screen-2xl mx-auto text-black fixed top-0 right-0 left-0">
+      <nav className="bg-[#EE6800] h-[75px] md:px-14 p-4 max-w-screen-3xl mx-auto text-black fixed top-0 right-0 left-0">
         <div className="text-lg container mx-auto flex justify-between items-center font-medium">
           <div className="flex space-x-14 items-center">
             <a
@@ -42,7 +42,7 @@ const Navbar = () => {
                 alt=""
                 className="w-8 inline-block items-center"
               />
-              <span>Kutumba Tech</span>
+              <span className="font-semibold  ">Kutumba Tech</span>
             </a>
             {/* showing navitems using map */}
             <ul className="md:flex space-x-12 hidden">
@@ -54,7 +54,7 @@ const Navbar = () => {
                   offset={-100}
                   key={link}
                   to={path}
-                  className="block hover:text-purple-600 cursor-pointer"
+                  className="  text-xl block hover:text-purple-600 cursor-pointer"
                 >
                   {link}
                 </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
               Language
             </a>
             
-  <button onClick={handleSignUp} className="  bg-blue-400 py-2 px-2 md:w-[100px] transition-all duration-300 rounded hover:text-white hover:bg-indigo-600">
+  <button onClick={handleSignUp} className="  bg-blue-500 py-1 px-2 md:w-[100px] transition-all duration-300 rounded hover:text-white hover:bg-indigo-600">
     Sign Up
   </button>
 

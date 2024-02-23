@@ -1,17 +1,24 @@
+// userSlice.js
 import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+  name: 'sujal',
+  email: 'sujalmdhr@gmail.com',
+  number: '1234567890',
+  oldPassword: 'asd',
+  password: 'asdf'
+};
 
 export const userSlice = createSlice({
   name: 'user',
-  initialState: {
-    name: '',
-    email: '',
-    number: '',
-    oldPassword: '',
-    password: ''
-  },
+  initialState,
   reducers: {
     updateProfile: (state, action) => {
-      return { ...state, ...action.payload };
+      // Return a new state object with updated values
+      return {
+        ...state,
+        ...action.payload
+      };
     }
   }
 });

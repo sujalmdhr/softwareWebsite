@@ -12,6 +12,13 @@ nav {
 
 .gradientBg {
   background: linear-gradient(99deg, #EE9AE5 0%, #5961F9 100%) !important;
+
+  
+}
+
+.gradientBg2 {
+  background: linear-gradient(99deg, #FF0000 0%, #FFA500 50%, #FFFF00 100%);
+
 }
 .custom-bullet {
   list-style-type: none; /* Remove default bullets */

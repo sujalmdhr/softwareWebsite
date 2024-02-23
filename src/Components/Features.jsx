@@ -9,7 +9,7 @@ const Features = () => {
           <h3 className="text-3xl text-primary font-bold lg:w-1/2 mb-3">
             Why We are Better than Others
           </h3>
-          <p className="text-base text-tertiary">
+          <p className="text-justify  text-tertiary">
             Our software company distinguishes itself from competitors through a
             combination of expertise, innovation, and a customer-centric
             approach. With a specialized focus on cutting-edge technologies and

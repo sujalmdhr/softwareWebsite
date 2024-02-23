@@ -8,7 +8,7 @@ const Pricing = () => {
       monthlyPrice: 19,
       yearlyPrice: 199,
       discription:
-        "Dive into fundamentals for beginners.",green: "src/assets/gDot.png",
+        "Dive into fundamentals for beginners and expand our creativity.",green: "src/assets/gDot.png",
     },
     {
       name: "Advance",
@@ -75,7 +75,7 @@ const Pricing = () => {
               {pkg.name}
             </h3>
             <p className="text-tertiary text-center my-5 ">{pkg.discription}</p>
-            <p className="mt-5 text-center text-secondary text-4xl font-bold">
+            <p className="mt-5 text-center text-orange-600 text-4xl font-bold">
               {isYearly ? `${pkg.yearlyPrice}` : `${pkg.monthlyPrice}`}
               <span className="text-base text-tertiary font-medium ">
                 /{isYearly ? "year" : "month"}
@@ -104,7 +104,7 @@ const Pricing = () => {
               </li>
             </ul>
             <div className="w-full mx-auto mt-8 flex items-center justify-center">
-              <button className=" p-2 rounded-md hover:bg-green-500 bg-purple-600 text-white font-semibold">
+              <button className=" p-2 rounded-md hover:bg-red-600 bg-orange-600 text-white font-semibold">
                 Get Started
               </button>
             </div>

@@ -66,7 +66,7 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="gradientBg h-screen flex justify-center items-center ">
+      <div className="gradientBg2 h-screen flex justify-center items-center ">
         {/* form */}
         <div className="bg-white rounded-lg shadow-lg shadow-black/30 h-[500px] pl-7 w-[400px] flex flex-col justify-center">
           <form className="space-y-1 " onSubmit={handleSignUp}>

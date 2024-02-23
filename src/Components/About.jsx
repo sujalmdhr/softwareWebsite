@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <div
-        className="md:px-14 p-4 max-w-screen-xl mx-auto space-y-10"
+        className="md:px-14 p-4 max-w-screen-2xl mx-auto space-y-10"
         id="about"
       >
         <div className="text-center">
@@ -83,7 +83,7 @@ const About = () => {
           <div className="w-full md:w-1/1 ">
             <h2 className="md:text-5xl text-3xl font-bold text-primary mb-5 leading-normal">
               Why Choose Us?
-              <span className="text-secondary"> for many years.</span>
+              <span className="text-orange-600"> for many years.</span>
             </h2>
             <p className="flex flex-col text-black text-lg mb-7">
               Our commitment to product improvement spans many years, reflecting
@@ -97,7 +97,7 @@ const About = () => {
               improving user experience.
             </p>
             <div className="text-center">
-              <button className="bg-secondary font-semibold text-black p-2 rounded hover:bg-blue-600 transition-all duration-300">
+              <button className="bg-orange-600 font-semibold text-white p-2 rounded hover:bg-red-600 transition-all duration-300">
                 Get Started
               </button>
             </div>

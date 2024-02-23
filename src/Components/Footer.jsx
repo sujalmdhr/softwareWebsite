@@ -4,12 +4,12 @@ import Features from "./Features";
 
 const Footer = () => {
   return (
-    <div className="bg-[#010851] md:px-14 p-4 max-w-screen-2xl mx-auto text-white items-start"id="footer">
+    <div className="bg-[#EE6800]  md:px-14 p-4 max-w-screen-3xl mx-auto text-white items-start"id="footer">
       <div className="my-12  flex flex-col md:flex-row gap-8">
         <div className="md:w-1/2 space-y-8">
           <a
             href="/"
-            className="text-2xl font-semibold flex items-center space-x-3 text-black-700"
+            className="text-3xl font-semibold flex items-center space-x-3 text-black-700"
           >
             <img src={logo} alt="" className="w-10 inline-block items-center" />
             <span className="text-white">Kutumba Tech</span>
@@ -26,12 +26,12 @@ const Footer = () => {
               name="email"
               id="email"
               placeholder="Your Email"
-              className="bg-[#9a7af159] py-2 px-4 rounded-md focus:outline-none"
+              className="bg-[#FFFFF] py-2 px-4 rounded-md focus:outline-none"
             />
             <input
               type="submit"
               value="Subscribe"
-              className="px-4 py-2 bg-secondary rounded-md -ml-2 cursor-pointer hover:bg-white hover:text-black duration-300 transition-all"
+              className="px-4 py-2 bg-red-600 rounded-md -ml-2 cursor-pointer hover:bg-white hover:text-black duration-300 transition-all"
             />
           </div>
         </div>
