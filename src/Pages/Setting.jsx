@@ -27,8 +27,19 @@ function Setting({ initialName }) {
         e.preventDefault();
         console.log("Form is being submitted");
         console.log("Form Data:", formData);
-        dispatch(updateProfile(formData));
+        
+        // Assuming you have the user's id stored somewhere, or you receive it as a prop
+        const userId = '123'; // You should replace this with the actual user id
+        
+        // Merge the formData with the userId
+        const updatedProfile = {
+            id: userId,
+            ...formData
+        };
+    
+        dispatch(updateProfile(updatedProfile));
     };
+    
     
 
     return (

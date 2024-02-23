@@ -40,7 +40,7 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt=""
-                className="w-8 inline-block items-center"
+                className="w-7 inline-block items-center"
               />
               <span className="font-semibold  ">Kutumba Tech</span>
             </a>
